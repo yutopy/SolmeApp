@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-admin/promotions-admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Información Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="container-create-product">
+    <ion-item>
+      <ion-label position="stacked">Nombre de tablero</ion-label>
+      <ion-input [(ngModel)]="new_name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Decripción</ion-label>
+      <ion-textarea [(ngModel)]="new_description" rows="6" cols="20" type="text" placeholder="Descripción del producto"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Tipo de Tablero</ion-label>
+      <ion-input [(ngModel)]="new_type" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Código único de tablero</ion-label>
+      <ion-input [(ngModel)]="new_code" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Estado: {{ tablero.status }} </ion-label>
+      <ion-select [(ngModel)]="new_status" okText="Aceptar" cancelText="Cancelar">
+        <ion-select-option value="Apagado">Apagado</ion-select-option>
+        <ion-select-option value="Encendido">Encendido</ion-select-option>
+        <ion-select-option value="Pausa">En pausa</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Asignado a: {{ name_user }}</ion-label>
+      <ion-select [(ngModel)]="new_user" okText="Aceptar" cancelText="Cancelar">
+        <ion-select-option *ngFor = "let usuario of usuarios" value="{{usuario.id}}">{{usuario.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="danger" (click)="deleteProduct()">Eliminar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" color="medium" (click)="goEditProduct()">Guardar cambios</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

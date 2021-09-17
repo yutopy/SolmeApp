@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-user"></ion-back-button>
+    </ion-buttons>
+    <ion-icon class="shopping-cart-icon" slot="start" name="football"></ion-icon>
+    <ion-title>Tableros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-title>Tablero asignado</ion-title>
+  </ion-item>
+  <ion-list>
+    <ion-card *ngFor = "let tablero of tableros">
+      <ion-card-header>
+        <ion-card-subtitle>{{tablero.device_type}}</ion-card-subtitle>
+        <ion-card-title>{{tablero.device_name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Descripción: <h2>{{tablero.device_description}}</h2><br>
+        Estado: <h2>{{tablero.status}}</h2>
+        <ion-toolbar>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-button expand="block" color="danger" (click)="detenerTablero(tablero.id)">Detener</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button expand="block" color="success" (click)="goEntrenar(tablero.id)">Entrenar</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-toolbar>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

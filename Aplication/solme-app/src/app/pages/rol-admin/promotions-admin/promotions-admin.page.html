@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tableros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goProfileAdmin()">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <!-- lista los tableros para encenderlos -->
+  <ion-item>
+    <ion-title>Tableros disponibles</ion-title>
+  </ion-item>
+  <ion-list *ngFor = "let tablero of tableros">
+    <ion-card (click)="goInfoPromotion(tablero)">
+      <ion-card-header>
+        <ion-card-subtitle>{{tablero.device_type}}</ion-card-subtitle>
+        <ion-card-title>{{tablero.device_name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Descripción: <h2>{{tablero.device_description}}</h2><br>
+        Código: <h2>{{tablero.device_code}}</h2>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-button color="secondary" expand="block" (click)="goCrearTablero()">Crear Tablero</ion-button>
+</ion-footer>

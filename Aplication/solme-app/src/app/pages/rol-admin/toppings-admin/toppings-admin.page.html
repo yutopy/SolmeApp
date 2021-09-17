@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Toppings o complementos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cnt-btn-add-product">
+    <ion-button color="warning" expand="block" (click)="goCreateTopping()">Crear Topping</ion-button>
+  </div>
+  <!-- lista de toppins -->
+  <ion-list>
+    
+    <ion-list-header>
+      <ion-label>
+        <h2 class="txt-bold">Toppings</h2>
+      </ion-label>
+    </ion-list-header>
+    
+    <ion-card (click)="goInfoTopping()">
+      <ion-item>
+        <img class="img-product" slot="start" src="../../../../assets/img/chispitas-de-chocolate.png">
+        <ion-label>
+          <h2>Chips de chocolate</h2>
+          <h4 class="txt-bold">$300</h4>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    
+    <ion-card>
+      <ion-item>
+        <img class="img-product" slot="start" src="../../../../assets/img/chispitas-colores.png">
+        <ion-label>
+          <h2>Chispitas de colores</h2>
+          <h4 class="txt-bold">$400</h4>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    
+    <ion-card>
+      <ion-item>
+        <img class="img-product" slot="start" src="../../../../assets/img/gomitas-gusanito.png">
+        <ion-label>
+          <h2>Gomitas gusanito</h2>
+          <h4 class="txt-bold">$600</h4>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+ 
+</ion-list>
+</ion-content>

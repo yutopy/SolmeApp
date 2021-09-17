@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-admin/promotions-admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Tablero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="container-create-product">
+    <ion-item>
+      <ion-label position="stacked">Tipo de Tablero</ion-label>
+      <ion-input [(ngModel)]="device_type" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre de Tablero</ion-label>
+      <ion-input [(ngModel)]="device_name" type="text" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Decripción</ion-label>
+      <ion-textarea [(ngModel)]="device_description" rows="6" cols="20" type="text" placeholder="Describa el tablero" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Código Único</ion-label>
+      <ion-input [(ngModel)]="device_code" type="text" required></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="medium" (click)="goPromotionsAdmin()">Cancelar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" color="warning" (click)="AddTablero()">Añadir</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

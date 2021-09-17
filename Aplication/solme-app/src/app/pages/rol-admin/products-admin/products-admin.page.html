@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Rutinas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goProfileAdmin()">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- lista productos Obleas -->
+  <ion-item>
+    <ion-title>Rutina Aleatoria</ion-title>
+  </ion-item>
+  <ion-list>
+    <ion-card (click)="goInfoProduct()">
+      <ion-item class="content-product">
+        <img class="img-product" slot="start" src="../../../../assets/img/futbolflex.jpeg">
+        <ion-label class="title-procuct" slot="start">Rutina aleatoria</ion-label>
+        <ion-label class="price-product" slot="end">Nivel medio</ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>

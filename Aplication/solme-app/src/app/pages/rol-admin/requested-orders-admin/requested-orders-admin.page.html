@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Solicitudes de Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goProfileAdmin()">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-col>
+      <ion-item class="title">
+        <ion-label>Por aprobacion: </ion-label>
+        <ion-input placeholder=" Buscar"></ion-input>
+      </ion-item>
+      <ion-card>
+        <ion-list>
+          <ion-item *ngFor = "let user of users_waiting">
+            <ion-icon slot="end" name="alert-circle-outline" (click)="infoUser(user)"></ion-icon> 
+            <ion-icon  slot="end"name="checkbox-outline" (click)="checkUser(user.id)"></ion-icon>               
+            <ion-icon slot="end" name="close-sharp" (click)="rechazarUser(user.id)"></ion-icon>
+            <h2>{{user.name}}</h2>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-col>
+
+
+    <ion-col>
+      <ion-item class="title">
+        <ion-label>Aceptadas: </ion-label>
+        <ion-input placeholder=" Buscar"></ion-input> 
+      </ion-item>
+      <ion-card>
+        <ion-list>
+          <ion-item *ngFor = "let user of users_aproved">
+            <ion-icon slot="end" name="alert-circle-outline" (click)="infoUser(user)"></ion-icon> 
+            <ion-icon slot="end" name="close-sharp" (click)="rechazarUser(user.id)"></ion-icon>
+            <h2>{{user.name}}</h2>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-col>
+
+
+    <ion-col>
+      <ion-item class="title">
+        <ion-label>Rechazadas: </ion-label>
+        <ion-input placeholder=" Buscar"></ion-input>
+      </ion-item>
+      <ion-card>
+        <ion-list>
+          <ion-item *ngFor = "let user of users_rejected">
+            <ion-icon slot="end" name="alert-circle-outline" (click)="infoUser(user)"></ion-icon> 
+            <ion-icon  slot="end"name="checkbox-outline" (click)="checkUser(user.id)"></ion-icon>               
+            <h2>{{user.name}}</h2>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+
+  <!--
+  <ion-card>
+    <ion-item class="title">
+      <ion-label>Solicitudes de Registro</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario 1</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="close-outline"></ion-icon>      
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario 2</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="close-outline"></ion-icon>      
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario 3</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="close-outline"></ion-icon>      
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-item class="title" >
+      <ion-label>Solicitudes Aceptadas</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario X</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="close-outline"></ion-icon>     
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario Y</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="close-outline"></ion-icon>     
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-item class="title" >
+      <ion-label>Solicitudes Rechazadas</ion-label>
+    </ion-item>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario Z</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="trash-sharp"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario A</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="trash-sharp"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label slot="start">Usuario B</ion-label>
+        <ion-icon slot="end" name="information-outline"></ion-icon>
+        <ion-icon slot="end" name="checkmark-outline"></ion-icon>
+        <ion-icon slot="end" name="trash-sharp"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  -->
+</ion-content>

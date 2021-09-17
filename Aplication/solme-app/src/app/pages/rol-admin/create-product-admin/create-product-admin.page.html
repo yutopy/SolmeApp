@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear Rutinas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+
+    <ion-list class="container-create-product">
+      <ion-item>
+        <ion-label position="stacked">Tipo de Rutina</ion-label>
+        <ion-select name="product_type" okText="Aceptar" cancelText="Cancelar">
+          <ion-select-option value="oblea">Aleatoria</ion-select-option>
+          <ion-select-option value="vaso-de-helado">Mixta</ion-select-option>
+          <ion-select-option value="postres">Definida</ion-select-option>
+          <ion-select-option value="topping">Esquinas</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nombre de la Rutina</ion-label>
+        <ion-input name="product_name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Decripción</ion-label>
+        <ion-textarea name="product_description" rows="6" cols="20" type="text" placeholder="Describa la rutina" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nivel</ion-label>
+        <ion-input name="product_price" type="number" required></ion-input>
+      </ion-item>
+      <!-- Foto del celular -->
+
+      <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addPhotoToGallery()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+      </ion-fab> -->
+
+      <ion-button expand="block" (click)="addPhotoToGallery()">
+        <ion-icon name="image"></ion-icon>
+        Cargar audio para la rutina
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="medium" (click)="goProductsAdmin()">Cancelar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" color="warning" (click)="AddProduct()">Añadir</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

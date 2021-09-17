@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ctn-card-profile">
+    <ion-card class="card-profile">
+      <img class="icon-profile" src="../../../../assets/img/icono-perfil.png">
+      <div class="ptn-lvl-profile">
+        <ion-label>
+          <h2 class="txt-bold">Nivel 4</h2>
+          <h3>Puntos de nivel(320/1000)</h3>
+          <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+        </ion-label>
+      </div>
+
+      <div class="inf-pro">
+        <ion-label>
+          <h2 class="txt-bold">Nombre: {{ usuariodata.name }} {{ usuariodata.last_name }}</h2>
+          <h2>Email: {{ usuariodata.email }}</h2>
+          <h2>Telefono: {{ usuariodata.phone_number }}</h2>
+          <h2>Preferencia sabor: <b>{{ usuariodata.favorite_flavor }}</b></h2>
+        </ion-label>
+      </div>
+    </ion-card>
+  </div>
+
+
+
+  <!-- Card nivel de Perfil -->
+  <!-- <ion-item class="card-user">
+    <img class="icon-profile" src="../../../../assets/img/icono-perfil.png" alt="">
+    <ion-label>
+      <h2 class="txt-bold">Nivel 4</h2>
+      <h4>Puntos de nivel(320/1000)</h4>
+      <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+    </ion-label>
+  </ion-item>
+
+
+  <ion-list class="content-profile">
+    <ion-label>
+      <h2 class="txt-bold">Nombre</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="Pepito Alberto" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Apellidos</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="Perez Gonzales" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Correo</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="pepitoperez@gmail.com" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Telefono</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="3124685587" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Dirección</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="Cll 4 #7-06" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Fecha nacimiento</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="10/11/1999" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Preferencia de sabor</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="Chocolate" 
+      disabled>
+    </ion-label>
+  </ion-list> -->
+  <!-- <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Nombre</h2>
+      <h3>Pepito</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Apellidos</h2>
+      <h3>Perez</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Correo</h2>
+      <h3>pepitoperez@gmail.com</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Telefono</h2>
+      <h3>3211565464</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Dirección</h2>
+      <h3>Cll 42 #5-05</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Fecha nacimiento</h2>
+      <h3>10/11/1999</h3>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Preferencia de sabor</h2>
+      <h3>Chocolate</h3>
+    </ion-label>
+  </ion-item> -->
+
+  <div class="content-button">
+    <button class="btn-reg" (click)="doCloseSession()">Cerrar Sesión</button><br>
+  </div>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slides">
+      <div class="slide-img-padding">
+        <img [src]="slide.img">
+        <ion-label>
+          <h2 class="txt-bold" [innerHTML]="slide.title"></h2>
+          <h3 [innerHTML]="slide.description"></h3>
+        </ion-label>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>
+<ion-footer>
+  <ion-button color="secondary" expand="block" (click)="goLogin()">Iniciar Aplicación</ion-button>
+</ion-footer>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Métricas</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+  <ion-item>
+    <ion-title>Historial de aciertos</ion-title>
+  </ion-item>
+
+  <ion-list>
+    <ion-card *ngFor = "let metrica of metricas">
+      <ion-card-header>
+        <ion-card-title>{{metrica.titulo}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Aciertos: <h2>{{metrica.aciertos}}</h2><br>
+        Fracasos: <h2>{{metrica.fracasos}}</h2><br>
+        Cantidad de datos analizados: <h2>{{metrica.cant_datos}}</h2>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

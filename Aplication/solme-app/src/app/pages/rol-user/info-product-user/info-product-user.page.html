@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Información Tablero</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-img-product">
+    <img class="img-producto-info" src="../../../../assets/img/oblea-caramelo.png" alt="">
+  </div>
+  
+  <div class="content-description">
+    <ion-label>
+      <h1 class="txt-bold">Oblea de Caramelo</h1>
+      <ion-text class="txt-bold">Descripción</ion-text><br>
+      <ion-text>Oblea con queso rayado, crema de arequipe y trozos de chocolate</ion-text>
+    </ion-label>
+  </div>
+
+  <!-- lista de toppins -->
+  <ion-list>
+    
+      <ion-list-header>
+        <ion-label>
+          <h2 class="txt-bold">Toppings</h2>
+          <h5>Seleccione los toppings que le gustaria añadir(Opcional)</h5>
+        </ion-label>
+      </ion-list-header>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>
+            <h2>Chips de chocolate</h2>
+            <h4 class="txt-bold">$300</h4>
+          </ion-label>
+          <ion-checkbox color="danger" slot="end"></ion-checkbox>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>
+            <h2>Chispitas de colores</h2>
+            <h4 class="txt-bold">$400</h4>
+          </ion-label>
+          <ion-checkbox color="danger" slot="end"></ion-checkbox>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>
+            <h2>Gomitas gusanito</h2>
+            <h4 class="txt-bold">$600</h4>
+          </ion-label>
+          <ion-checkbox color="danger" slot="end"></ion-checkbox>
+        </ion-item>
+      </ion-card>
+   
+  </ion-list>
+</ion-content>
+<ion-footer transparent>
+  <button class="btn-add-product txt-bold">Añadir al carrito</button>
+</ion-footer>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Entrenar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning" (click)="goShoppingCart()">
+      <ion-icon name="football"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+    <ion-button class="btn-anotacion" color="success" (click)="goAnotacion('Anotacion')">Anotación</ion-button>
+
+    <ion-button class="btn-fracaso" color="danger" (click)="goAnotacion('Fracaso')">Fracaso</ion-button>
+
+</ion-content>

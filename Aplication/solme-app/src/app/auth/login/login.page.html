@@ -1,0 +1,33 @@
+<ion-header>
+  <div class="content-title">
+    <ion-toolbar>
+      <ion-buttons  slot = "start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-label>Iniciar Sesión</ion-label>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div>
+    <img class="img-oblea" src="../../../assets/img/icon.png" alt="">
+  </div>
+  <div class="container-login">
+    
+    <ion-item>
+      <ion-label position="stacked">Correo</ion-label>
+      <ion-input [(ngModel)]="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password" required></ion-input>
+    </ion-item><br>
+    <div class="content-button">
+      <button class="btn-log" (click)="doLogin()">Ingresar</button><br>
+    </div>
+    <div>
+      <button class="btn-reg" (click)="goSignUp()">Registrarse</button>
+    </div>
+  </div>
+</ion-content>

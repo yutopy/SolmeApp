@@ -1,0 +1,195 @@
+<ion-header>
+  <ion-toolbar> 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Arma tu oblea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>
+      <h2 class="txt-bold">Arma tu oblea</h2>
+      <h3>Escoge los ingredientes que deseas en tu oblea</h3>
+    </ion-label>
+  </ion-item>
+
+  <!-- lista de mermeladas -->
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>
+          <h2 class="txt-bold">Mermeladas</h2>
+          <h5>Minimo un producto</h5>
+        </ion-label>
+      </ion-list-header>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>Mermelada de mora</ion-label>
+          <ion-radio slot="end" value="mermelada-mora"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-piña.png">
+          <ion-label>Mermelada de piña</ion-label>
+          <ion-radio slot="end" value="mermelada-pina"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-fresa.png">
+          <ion-label>Mermelada de fresa</ion-label>
+          <ion-radio slot="end" value="mermelada-fresa"></ion-radio>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mark.png">
+          <ion-label>Sin mermelada</ion-label>
+          <ion-radio slot="end" value="sin-mermelada"></ion-radio>
+        </ion-item>
+      </ion-card>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- lista de salsas -->
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>
+          <h2 class="txt-bold">Salsas</h2>
+          <h5>Minimo un producto</h5>
+        </ion-label>
+      </ion-list-header>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>Salsa de cafe</ion-label>
+          <ion-radio slot="end" value="salsa-cafe"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>Salsa de Tiramesu</ion-label>
+          <ion-radio slot="end" value="salsa-tiramesu"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mermelada-mora.png">
+          <ion-label>Salsa chantilly</ion-label>
+          <ion-radio slot="end" value="salsa-chantilly"></ion-radio>
+        </ion-item>
+      </ion-card>
+
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mark.png">
+          <ion-label>Sin salsa</ion-label>
+          <ion-radio slot="end" value="sin-salsa"></ion-radio>
+        </ion-item>
+      </ion-card>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- lista de quesos -->
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>
+          <h2 class="txt-bold">Quesos</h2>
+          <h5>Minimo un producto</h5>
+        </ion-label>
+      </ion-list-header>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/queso-cuajada.png">
+          <ion-label>Queso cuajada</ion-label>
+          <ion-radio slot="end" value="queso-cuajada"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/queso-crema.png">
+          <ion-label>Queso crema</ion-label>
+          <ion-radio slot="end" value="queso-crema"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mark.png">
+          <ion-label>Sin Queso</ion-label>
+          <ion-radio slot="end" value="sin-queso"></ion-radio>
+        </ion-item>
+      </ion-card>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- lista de Helados -->
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>
+          <h2 class="txt-bold">Helados</h2>
+          <h5>Minimo un producto</h5>
+        </ion-label>
+      </ion-list-header>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/helado-fresa.png">
+          <ion-label>Helados de fresa</ion-label>
+          <ion-radio slot="end" value="helado-fresa"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/helado-brownie.png">
+          <ion-label>Helado de brownie</ion-label>
+          <ion-radio slot="end" value="helado-brownie"></ion-radio>
+        </ion-item>
+      </ion-card>
+      
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/helado-mandarina.png">
+          <ion-label>Helado de mandarina</ion-label>
+          <ion-radio slot="end" value="helado-mandarina"></ion-radio>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/helado-ron-pasas.png">
+          <ion-label>Helado de Ron con pasas</ion-label>
+          <ion-radio slot="end" value="helado-ron-pasas"></ion-radio>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <img class="img-product" slot="start" src="../../../../assets/img/mark.png">
+          <ion-label>Sin helado</ion-label>
+          <ion-radio slot="end" value="sin-helado"></ion-radio>
+        </ion-item>
+      </ion-card>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
+
+<ion-footer transparent>
+  <button class="btn-add-product txt-bold">Añadir al carrito</button>
+</ion-footer>

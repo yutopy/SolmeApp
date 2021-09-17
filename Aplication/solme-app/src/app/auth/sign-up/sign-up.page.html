@@ -1,0 +1,66 @@
+<ion-header>
+  <div class="content-title">
+    <ion-toolbar>
+      <ion-buttons  slot = "start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-label>Formulario de registro</ion-label>
+    </ion-toolbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="container-sign-up">
+    <div class="content-img">
+      <img class="animated-oblea" src="../../../assets/img/icon.png" alt="">
+    </div>
+    <ion-item>
+      <ion-label position="stacked">Nombres</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="names"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellidos</ion-label>
+      <ion-input type="text" [(ngModel)]="last_name" name="surnames"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Telefono</ion-label>
+      <ion-input type="text" [(ngModel)]="phone_number" name="telephone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="address" name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha nacimiento</ion-label>
+      <ion-datetime [(ngModel)]="born_date"  displayFormat="DD MMMM YYYY" okText="Aceptar" cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Confirmar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item><br>
+    <div class="content-button">
+      <button class="btn-reg" (click)="doSignUp()">Registrarse</button><br>
+    </div>
+    <button class="btn-log" (click)="goLogin()">¿Ya tienes cuenta? Inicia Sesión</button>
+    <ion-grid>
+      <!--
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" fill="outline">Google</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" fill="outline">Facebook</ion-button>
+        </ion-col>
+      </ion-row>
+      -->
+    </ion-grid>
+  </div>
+</ion-content>

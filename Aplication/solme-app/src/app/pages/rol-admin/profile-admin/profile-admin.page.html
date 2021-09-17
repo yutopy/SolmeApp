@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs-admin/requested-orders-admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil Administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Card nivel de Perfil -->
+  <ion-item class="card-user">
+    <img class="icon-profile" src="../../../../assets/img/icono-perfil.png" alt="">
+    <ion-label>
+      <h2 class="txt-bold">Nivel 4</h2>
+      <h4>Puntos de nivel(320/1000)</h4>
+      <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+    </ion-label>
+  </ion-item>
+  
+  <ion-list class="content-profile">
+    <ion-label>
+      <h2 class="txt-bold">Nombre</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.name }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Apellidos</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.last_name }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Correo</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.email }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Telefono</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.phone_number }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Dirección</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.address }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Fecha nacimiento</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.born_date }}" 
+      disabled>
+    </ion-label>
+    <ion-label>
+      <h2 class="txt-bold">Preferencia de sabor</h2>
+      <input 
+      class="cnt-info-profile" 
+      type="text"
+      value="{{ usuariodata.favorite_flavor }}" 
+      disabled>
+    </ion-label>
+  </ion-list>
+  <div class="content-button">
+    <button class="btn-reg" (click)="doCloseSession()">Cerrar Sesión</button><br>
+  </div>
+</ion-content>
