@@ -90,7 +90,11 @@ const routes: Routes = [
   {
     path: 'create-promotion-admin',
     loadChildren: () => import('./pages/rol-admin/create-promotion-admin/create-promotion-admin.module').then( m => m.CreatePromotionAdminPageModule)
+  },  {
+    path: 'tabcamara',
+    loadChildren: () => import('./pages/rol-user/tabcamara/tabcamara.module').then( m => m.TabcamaraPageModule)
   },
+
   
 
 ];

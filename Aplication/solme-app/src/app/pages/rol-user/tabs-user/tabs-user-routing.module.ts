@@ -23,6 +23,10 @@ const routes: Routes = [
         loadChildren: () => import('../profile-user/profile-user.module').then(m => m.ProfileUserPageModule)
       },
       {
+        path: 'tabcamara',
+        loadChildren: () => import('../tabcamara/tabcamara.module').then(m => m.TabcamaraPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs-user/index-user',
         pathMatch: 'full'
